@@ -1,23 +1,16 @@
 public class Kata {
+    public static int sum(int[] numeros) {
+        if (numeros != null) {
+            int min = numeros[0], max = numeros[0];
+            int suma = 0;
+            for (int n : numeros) {
+                if (min > n) min = n;
+                if (max < n) max = n;
 
-    private int[] num;
-    private int max = 0;
-    private int min = 0;
-    private int sum = 0;
-
-    public Kata() {
-    }
-    
-    public int sum(int[] numeros) {
-        num = numeros;
-        for (int numero : num) {
-            if (max < num[i]) max = num[i];
-            if (min > num[i]) min = num[i];
+                suma += n;
+            }
+            return (suma - min) - max;
         }
-        for (int numero : num) {
-            if (numero != max && numero != min) sum += numero;
-        }
-        
-        return sum;
+        return 0;
     }
 }
