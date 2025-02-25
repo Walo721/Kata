@@ -6,7 +6,6 @@ public class Kata {
             for (int n : numeros) {
                 if (min > n) min = n;
                 if (max < n) max = n;
-
                 suma += n;
             }
             return (suma - min) - max;
